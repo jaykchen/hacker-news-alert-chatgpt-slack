@@ -27,7 +27,6 @@ pub async fn run() {
 }
 
 async fn callback(_load: Vec<u8>) {
-    println!("{:?}", String::from_utf8_lossy(&_load).to_string());
     dotenv().ok();
 
     let keyword = env::var("KEYWORD").unwrap_or("ChatGPT".to_string());
